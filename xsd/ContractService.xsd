@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+		   elementFormDefault="qualified"			
+           jxb:version="1.0">
+	<xs:element name="ContractInput" >
+		<xs:complexType>		
+			<xs:sequence>
+				<xs:element ref="BaseView"/>
+				<xs:element ref="ConfigurationView" minOccurs="0"/>
+				<xs:element ref="InvestimentoView" minOccurs="0"/>
+				<xs:element ref="Busta10View" minOccurs="0"/>
+				<xs:element ref="InformazioniView" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BaseView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ctrId" type="xs:string"/>
+				<xs:element name="contractType" type="contractType"/>
+				<xs:element name="productName" type="xs:string"/>
+				<xs:element name="soggettoId" type="xs:long"/>
+				<xs:element name="templateName" type="xs:string"/>
+				<xs:element name="productXml" type="xs:string"/>
+				<xs:element name="generaStampa" type="generaStampa" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="contractType">
+	  <xs:restriction base="xs:string">
+	    <xs:enumeration value="MDA"/>
+	    <xs:enumeration value="COVER"/>
+	  </xs:restriction>
+	</xs:simpleType>	
+	<xs:simpleType name="generaStampa">
+	  <xs:restriction base="xs:string">
+	    <xs:enumeration value="T"/>
+	    <xs:enumeration value="F"/>
+	  </xs:restriction>
+	</xs:simpleType>	
+	<xs:element name="ConfigurationView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ngRequired" type="xs:boolean" minOccurs="0" />
+				<xs:element name="b10Required" type="xs:boolean" minOccurs="0" />
+				<xs:element name="dsfRequired" type="xs:boolean" minOccurs="0" />
+				<xs:element name="secondCallRequired" type="xs:boolean" minOccurs="0" />
+				<xs:element name="aColMctRequired" type="xs:boolean" minOccurs="0" />				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InvestimentoView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idExternal" type="xs:string" minOccurs="0" />
+				<xs:element name="idFunzione" type="xs:string" minOccurs="0" />
+				<xs:element name="idOperazione" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Busta10View">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="b10Code" type="xs:string" minOccurs="0" />
+				<xs:element name="b10NumeroConto" type="xs:string" minOccurs="0" />
+				<xs:element name="b10OttoCifre" type="xs:string" minOccurs="0" />
+				<xs:element name="b10cdr" type="xs:string" minOccurs="0" />
+				<xs:element name="anagrafica" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InformazioniView">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="creditiId" type="xs:string" minOccurs="0" />
+				<xs:element name="documentoCode" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
