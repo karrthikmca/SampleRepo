@@ -1,0 +1,77 @@
+JavaScripts
+-----------------------------
+http://jsforcats.com/
+http://bonsaiden.github.io/JavaScript-Garden/#intro
+http://zeekat.nl/articles/constructors-considered-mildly-confusing.html
+http://tobyho.com/2010/11/22/javascript-constructors-and/
+http://www.adequatelygood.com/tag/javascript/
+http://dmitrysoshnikov.com/ecmascript/javascript-the-core/
+http://odetocode.com/Articles/473.aspx
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+
+Java Script Tools
+----------------------------------
+http://en.wikipedia.org/wiki/List_of_ECMAScript_engines
+http://en.wikipedia.org/wiki/JavaScript_engine
+
+JQuery References:
+----------------------------------
+http://jquery.com/
+http://addyosmani.com/jqprovenperformance/
+http://w3schools.com/jquery/default.asp
+http://www.w3schools.com/jquery/jquery_quiz.asp
+
+BackBone References
+-------------------------------------
+http://backbonejs.org/
+http://documentcloud.github.io/backbone/docs/backbone.html
+http://aaronhardy.com/javascript/javascript-architecture-the-basics/
+http://lostechies.com/derickbailey/category/backbone/
+http://drumcoder.co.uk/blog/2012/apr/27/getting-started-backbonejs/
+http://davidsulc.com/blog/2012/04/15/a-simple-backbone-marionette-tutorial/
+http://net.tutsplus.com/tutorials/javascript-ajax/build-a-contacts-manager-using-backbone-js-part-1/
+http://williambrownstreet.net/work/backbonejs.slides/codemirror/introduction/index.html
+
+java Essentials 
+---------------------------------------------------
+http://www.studymaterials.org/IV
+
+Spring MVC Project
+--------------------------------------------------
+http://www.dineshonjava.com/2012/12/spring-mvc-form-handling-example.html#.UmZWV9Iwd2-
+http://viralpatel.net/blogs/spring-mvc-hashmap-form-example/
+
+SCRUM methodology
+---------------------------------------------------
+http://www.scrum-institute.org/Introduction_to_Scrum_A_Real_World_Example.php
+
+http://salmanqayyum.com/2009/06/28/the-scrum-management-a-practical-example/
+
+Square rotate game Name
+------------------------------------------------------
+Rubik's Cube Game
+
+New Logger API For Projects
+-----------------------------------------------------------------------
+https://svil.bansel.it/wiki/display/ITFRAMEWORKDIBASE/Java+API+Tutorial
+
+Mobile_Web_Toolkit Notes
+-----------------------------------------------------------------------
+\\backupsvr\others\E-Learning\Mobile_Web_Toolkit
+
+http://programmers.stackexchange.com/questions/215364/can-i-use-my-java-project-for-commercial
+
+http://immux.blogspot.it/2011/08/fix-power-calibration-error-while.html
+
+
+Java Standards 
+-------------------------------------------------------------------------
+http://www.bahrain.bh/pubportal/wps/wcm/connect/690676004394686f843cbea42b14669a/Java_J2EE_Naming_Convention(NEAF).pdf?MOD=AJPERES&CACHEID=690676004394686f843cbea42b14669a
+http://www.weebly.com/uploads/6/9/4/4/6944807/java_standards_v1.0neaf.pdf
+
+
+111+ Keyboard Shortcuts in Online Applications
+-------------------------------------------------------------------------
+http://www.techgig.com/readnews.php?category=Other+Technology+news&tgnews_link=http%3A%2F%2Fthenextweb.com%2Flifehacks%2F2014%2F05%2F28%2F111-keyboard-shortcuts-used-online-tools%2F%3Futm_source%3Dsocial%26utm_medium%3Dfeed%26utm_campaign%3Dprofeed&tg_type=rss&tgnews_id=48065
