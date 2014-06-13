@@ -1,0 +1,239 @@
+pwd                             ---- Will show the current path 
+
+du -h filename                  ---- To know the file size
+
+df -h                           ---- To find free disk space.In MB and GB Format
+
+df -k                           ---- To find free disk space
+
+bash                            ---- To enable the bash   
+
+ps -eaf | grep 'java'  	        ---- TO know the running JAVA processes
+
+ps -eaf | grep --colour 'java'  ---- Display the JAVA processes with serach String i.e., 'java' in red colour
+
+ps -A                           ---- To know running processes
+
+ps -u ute_bsw                   ---- Processes running by user ute_bsw
+
+crontab -l                      ---- Will show you the list of processess configured as batch
+
+kill -9 processno  		          ---- To kill the processes
+
+tar -xvzf tomcat-6.0.18.tar.gz  ---- To unzip the tar file
+
+jar cvf wiki.war .              ---- To zip the war file
+
+rm -rf directory                ---- Remove a directory, even if files existed within that directory. Recusive remove
+
+rm /path/to/directory/*         ---- To remove everything in a directory use:
+
+touch core 
+
+echo $LANG /locale charmap/locale  ---- To know the encoding style in the linux machine
+
+locale -a                          ---- Lists all avail encodings
+
+export LANG=en_US.utf8             ---- To change the encoding to UTF-8
+
+export PATH=$PATH:/u02/app/oracle/product/11.2.0.3/db_home11203  ---- To set the path
+
+----------------------------------------------------------------------------------------------------------------------------
+Secure Copying One Remote machine file to the local login machine
+----------------------------------------------------------------------------------------------------------------------------
+scp -r sdis@192.50.51.210:/sdis/staging/confluence_3.5/bin/apache-tomcat-6.0.32/webapps/wiki.war .
+
+scp wiki.war ute_bsw@dctstbw01:/appdm/a_dmn/Bus_Wiki/workspace   -- copy from one machine to other
+
+scp ute_bsw@dcppbw01:/appdm/a_dmn/Bus_Wiki/bin/apache-tomcat-6.0.18/webapps/wiki.war .   -->Login to Test wiki and copied the source from PP    
+----------------------------------------------------------------------------------------------------------------------------    
+Process Related Commands
+----------------------------------------------------------------------------------------------------------------------------
+ps -eaf | grep 'java'                                                   ---- To know the running java processes
+jps                                                                     ---- To list process id's of running processes
+jmap -histo <Process ID> | grep  <class name/package name>              ---- To know list of classes instantiated in package for a specified process
+jmap -dump:live,format=b,file=/Required Path/garbage.hprof process-pid  ---- To get the heap dump
+jmap -dump:format=b,file=/Required Path/heapdump.hprof process-pid      ---- To get the heap dump 
+
+
+
+Heap size to increase in tomacat windows add this line in startup.bat file contained in bin folder
+export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m "
+
+
+In catalina.sh file
+export JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=256m "
+
+Change this in catalina.sh in Tomcat 
+-Djava.awt.headless=true
+
+------------------------------------------------------------------------------
+Searching For and Inside Files (find, grep)
+------------------------------------------------------------------------------
+
+The command find is used to find files with various attributes. It has many options. This makes it somewhat awkward for just searching for a file by name. For example, the command 
+find . -name "*.tex" -print
+finds all the files in the current directory and any directories below that have a name which ends in .tex and then prints the result of the search at the terminal.
+
+The program grep looks inside files for specified text. For example, 
+grep Diophantine paper.tex
+will search the file paper.tex for any occurrences of the text ``Diophantine'' and then then print those lines at the terminal. 
+If you are searching in more than one file as in grep Diophantine *.tex it will print the name of the file in which the line was found.
+
+eg: find . -name "*.jks" -print
+
+zgrep 'SearchText' -15 --colour serverLog.out.gz  ---- To search in a zip file.It displays top 15 and bottom 15 lines of matched search string line
+----------------------------------------------------------------------------------------------------------
+Generating a Key Store file from certificate
+----------------------------------------------------------------------------------------------------------
+http://svil.bansel.it/wiki/display/~GBS02380/Solve+SSL+Handshake+exception+in+applications
+
+keytool -import -file te-x-net.bansel.crt -keystore master.jks
+
+where te-x-net.bansel.crt is the exported certificate from the browser.In command Prompt Navigate to the location 
+where the exported certificate is stored and run the above command.After execution it will create a tesvil.jks file.
+
+Copy master.jks file in server and mention the location of jks file and its password in catalina.sh file like below
+
+ export JAVA_OPTS="$JAVA_OPTS -Djava.security.egd=/dev/random -Djavax.net.ssl.trustStore=/appdm/a_dmn/Bus_Wiki/data/master.jks 
+ -Djavax.net.ssl.trustStorePassword=password -Dcrowd.properties=/appdm/a_dmn/Bus_Wiki/bin/apache-tomcat-6.0.18/webapps/wiki/WEB-INF/classes/crowd.properties"
+----------------------------------------------------------------------------------------------------------
+Memory Leak Utilities Used in JMAT Tool Which is added as plugin to the eclipse
+----------------------------------------------------------------------------------------------------------
+Take the Heap Dump
+Install JMAT Plugin in Eclipse.
+Go to MemoryAnalysis perspective File -> Open File to 
+In Overview Tab -> Click HistoGram -> In Group Result By(Icon) -> Select Group By Class Loader ->To list all class loader remain after undeploy.
+
+RunExpert System Test(Icon) -> Select Heap Dump Overview -> To view the overall report.
+
+Open Query Browser(Icon) -> Select Java Basics -> Class Loader Explorer -> Give the classloader name to see how many class loaders are present. 
+
+ 
+
+----------------------------------------------------------------------------------------------------------
+Use Ful Links
+----------------------------------------------------------------------------------------------------------
+www.buynow18.com ->To find the competitive books in vijetha competitions.
+
+http://onlinebookshopee.com/publisher_products.php?pub_id=1
+
+http://bibek.in/java/upload/548_Spring%20in%20Action%20(3rd%20Edition).pdf        ----------Spring in action book
+
+http://scjptest.com/mock-test.xhtml?execution=e1s1 ->Online Mock SCJP Test
+
+http://blog.javachap.com/index.php/crud-application-struts-1-hibernate-and-mysql/
+
+http://static.springsource.org/spring/docs/3.0.0.M3/reference/html/ch16s04.html   ---------Spring documentation
+
+http://static.springsource.org/docs/Spring-MVC-step-by-step/
+
+http://frankkieviet.blogspot.se/2006/10/how-to-fix-dreaded-permgen-space.html -> To check the Heap Size consumed by the classes.Linux commands
+
+http://docs.oracle.com/javase/7/docs/webnotes/tsg/TSG-VM/html/memleaks.html  -----Trouble Shootimg the memory leaks problem.
+
+http://java.jiderhamn.se/2011/12/11/classloader-leaks-i-how-to-find-classloader-leaks-with-eclipse-memory-analyser-mat/
+
+http://eclipsesource.com/blogs/2013/01/21/10-tips-for-using-the-eclipse-memory-analyzer/ ---Memory analyzer(MAT) tool in Eclipse
+
+http://www.sslshopper.com/article-most-common-java-keytool-keystore-commands.html  --- Java Key store file creating commands
+
+http://middlewaremagic.com/weblogic/?p=2202 -> Step by Step procedure to deal with memory leak problems
+
+http://javarevisited.blogspot.it/2010/10/what-is-deadlock-in-java-how-to-fix-it.html -> What is,Reason,Avoid Dead Locks in Java
+
+http://javabrains.koushik.org/2011/12/struts-2-tutorial-01-introduction-to.html -> Tutorial with Videos
+
+http://javarevisited.blogspot.it/2013/01/threadlocal-memory-leak-in-java-web.html -> What is ThreadLocal how it causes memory leak
+
+
+
+
+www.1shop.co.in  ->Smarter way of shopping the house needs:
+
+http://www.lostpassword.com/windows-howto-old.htm ->passware enterprise kit
+
+http://handsontable.com/
+
+
+javaken
+http://www.javatechinfo.com/
+http://www.developer.am/
+http://bibek.in/
+http://javarevisited.blogspot.it/
+java4u
+viralpatel
+javatpoint
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+SENT THE ABOVE INFO BY MAIL
+--------------------------------------------------------------------------------------------------------------------------------------------
+http://javabrains.koushik.org/courses.html                           -> Struts,Spring,Maven,Servlets Tutorails with videos
+
+http://docs.spring.io/spring/docs/1.2.9/reference/introduction.html  -> Spring Tutorial
+
+http://howtodoinjava.com/2012/10/22/singleton-design-pattern-in-java/ -> Singleton Design Pattern
+
+
+
+
+
+
+What is Thread Local?
+ThreadLocal in Java is a mechanism to provide separate copy of shared object to every Thread. 
+So that they no longer shared between multiple Threads and remain thread-safe. 
+ThreadLocal variables are stored in a special map called ThreadLocalMap which is designed to hold thread local objects, 
+it uses WeakReferences for keys. Since every Thread has strong reference to there copy of ThreadLocal variables, 
+they are not garbage collected until Thread is Alive and this is what creates memory leak in a typical J2EE web application. 
+
+---------------------------------------------------------------------------------------------------------
+SPRING FRAMEWORK : APPLICATIONCONTEXT INSTANTIATION FOR WEB APPLICATIONS IN SPRING FRAMEWORK
+---------------------------------------------------------------------------------------------------------
+In web application ApplicationContext is created using Context Loaders. there are two implementations of context loader.
+ContextLoaderListener : It is listener implementation that is added to web.xml file.
+ContextLoaderServlet : It is servlet implementation that is configured with load-on-startup tag in web.xml.
+
+ ContextLoaderListener is simple way to use the spring in web application. this listener accept contextConfigLocation parameter from context-parama.
+You have to enter following code in web.xml file
+
+define contextConfigLocation parameter in context-param tag.
+
+<context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>/WEB-INF/services.xml</param-value>
+</context-param> 
+services.xml is the Spring configuration file in which you define beans.
+
+Add the ContextLoaderListener listener.
+
+<listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+---------------------------------------------------------------------------------------------------------
+SPRING MVC JDBC EXAMPLE TO CONNECT YOUR SPRING WEB APPLICATION TO THE DATABASE 
+---------------------------------------------------------------------------------------------------------
+you will have to create a DataSource and JdbcTemplate bean in your dispatcher servlet. 
+The following is the mapping for your data source in a dispatcher servlet
+
+<bean id="dataSource"
+                class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/jdbc" />
+        <property name="username" value="root" />
+        <property name="password" value="" />
+</bean>
+
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource">
+                <ref bean="dataSource" />
+        </property>
+</bean>
+
+<bean id="appService" class="roseindia.net.service.serviceImpl.AppServiceImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+</bean>
+
+
+
+
