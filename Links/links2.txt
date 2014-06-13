@@ -1,0 +1,425 @@
+Condizioni Jar Path
+---------------------------------------------------------------
+/mount/bea/one/10/10330/apps/BEdomain/BEcluster/lib/Condizioni
+/mount/bea/one/10/10330/apps/FEdomain/INcluster/lib/Condizioni
+/mount/bea/one/10/10330/apps/BEdomain/BEcluster/ejb/Condizioni
+/bea/one/10/10330/apps/FEdomain/INcluster/war/h2o/INwebapp/H2O/
+                                                   
+Condizioni Jar Path
+---------------------------------------------------------------
+/mount/bea/one/10/10330/apps/BEdomain/BEcluster/lib/Servizi
+/mount/bea/one/10/10330/apps/FEdomain/INcluster/lib/Servizi
+/mount/bea/one/10/10330/apps/BEdomain/BEcluster/ejb/Servizi
+
+External Libarary Jar Path
+---------------------------------------------------------------
+/mount/bea/one/10/10330/apps/FEdomain/FEcluster/lib/ExternalLib
+
+H2OPower Tester
+---------------------------------------------------------------
+http://172.22.45.55/main?application.H2OPowerTester.new
+
+Test Environment Link
+---------------------------------------------------------------
+https://te-x-net.bansel.it/gbs_intranet/index.jsp
+
+Pre Production Environment Link                                
+---------------------------------------------------------------
+https://pp-x-net.bansel.it/gbs_intranet/index.jsp
+
+Production Environment Link
+---------------------------------------------------------------
+https://x-net.bansel.it/gbs_intranet/index.jsp
+
+Message Manager SubSystem Tool
+---------------------------------------------------------------
+https://te-x-net.bansel.it/MessageManager/toolGestMsg.jsp
+
+Plan view URL
+---------------------------------------------------------------
+http://planviews01.bansel.it/planview/
+
+Biometrix URL
+---------------------------------------------------------------
+http://192.50.51.239:7777/pls/apex/f?p=280:5
+
+Resource Loader
+---------------------------------------------------------------
+https://ip//Utility/resourcefind.html
+
+SVN Reporsitory Path
+---------------------------------------------------------------
+http://repoquery.bansel.it/SvnWebQuery/login.aspx?ReturnUrl=%2fsvnwebquery%2fquery.aspx
+
+Jira Issue
+---------------------------------------------------------------
+https://svil.bansel.it/jira/secure/Dashboard.jspa
+
+Wiki Community BS
+---------------------------------------------------------------
+https://community.bansel.it/wiki/display/BASCH/Home
+
+Web mail
+---------------------------------------------------------------
+https://webmail.gbs.pro/owa/auth/logoff.aspx?Cmd=logoff
+
+Sonar Link
+---------------------------------------------------------------
+https://svil.bansel.it/sonar
+
+JMX Runner 
+---------------------------------------------------------------
+http://172.22.45.152/main?application.JMXRunner.new
+
+SVN Location Of Condizioni
+---------------------------------------------------------------
+https://svn.bansel.it/h2o/Condizioni
+
+SVN Location of Servizi
+---------------------------------------------------------------
+https://svn.bansel.it/h2o/Servizi
+
+DBA Package Extractor
+---------------------------------------------------------------
+http://pkgdba.bansel.it/Source_Extractor/index.html
+
+All Subsystem Jar FIles Location
+---------------------------------------------------------------
+http://buildcvs:8080/wls10/TEST/COMMON/DEPLOY/
+http://buildcvs:8080/wls10/PP/COMMON/DEPLOY/
+http://buildcvs:8080/wls10/PRO/COMMON/DEPLOY/
+
+Condizioni Documentation
+---------------------------------------------------------------
+https://svil.bansel.it/wiki/download/attachments/39096498/Manuale+amministrativo+Condizioni.pdf?version=1&modificationDate=1317379561000
+
+Jar Distribution
+---------------------------------------------------------------
+http://distribution.bansel.it/nexus/index.html#view-repositories
+
+Test Env Log File Location
+---------------------------------------------------------------
+IP Address : dctstas02 or dctstas01
+username   : readlog_on
+password   : readlog_on
+
+To Avoid Jsp Compilation 
+---------------------------------------------------------------
+/mount/bea/one/10/10330/apps/FEdomain/INcluster/war/h2o/INwebapp/WEB-INF/weblogic.xml
+Change this Code 
+<jsp-descriptor>
+    <page-check-seconds>10</page-check-seconds>
+    <keepgenerated>true</keepgenerated>
+    <verbose>false</verbose>
+    <print-nulls>false</print-nulls>
+    <backward-compatible>true</backward-compatible>
+    <working-dir>/nodel/compiled_jsps/in</working-dir>
+</jsp-descriptor>
+
+Eclipse Configuration for Condizioni build.xml
+---------------------------------------------------------------
+We need to add weblogic.jar and tools.jar files in ANT Home entry..
+Eclipse -> window -> preferance -> Ant -> Runtime -> Global Entry -> add External Jars -> 
+add weblogic.jar from C:\Oracle\Middleware\wlserver_10.3\server\lib\weblogic.jar
+add tools./jar from C:\Program Files\Java\jdk1.6.0_41\lib\tools.jar
+
+Run Ant From Java
+----------------------
+http://www.srccodes.com/p/article/9/Invoke-and-Execute-Hello-World-Ant-Script-Programmatically-using-Java-Code
+(note: need tools.jar from jdk lib.. and antlauncher.jar with ant.jar)
+
+Install Maven For Local POM
+---------------------------------------------------------------
+Extract Maven Zip File Into File System..
+Environment Variables -->
+1. Create JAVA_HOME to JDK/bin.
+2. Create MAVEN_HOME to Maven
+3. Create m2 to to Maven/bin
+4. Create path to %MAVEN_HOME%\bin;%JAVA_HOME%\bin;%m2% like this
+
+Run POM.XML
+---------------------------------------------------------------
+1. Open cmd promt
+2. goto POM.xml Location like cd "D:\Condizioni Workspace\Condizioni"
+3. execute pom.xml like mvn -f pom_local.xml test >> test.txt
+(Note: if we set JAVA_HOME for jdk 7 means EJBBeanUtil class Test Cases Failed.. Chenge JAVA_HOME For Jdk 6)
+
+Install Decompiler for Eclipse Plugin -- JadClipse
+---------------------------------------------------------------
+Eclipse --> go to help--> eclipse marketplace--> search JadClipse --> install
+
+To View File Which is Export From DB Using EXPORT_DBU Package
+---------------------------------------------------------------
+Server IP : teorabe
+Username  : executer
+Password  : executer
+Then goto Directory Path /oraappbe/Condizioni/data/output/BSE..
+Here We Having File Which We Write From DB Package..(CN_PKG_EXPORT_DBU)
+
+To Run Shell Script 
+---------------------------------------------------------------
+Server IP : teapp
+Username  : executer
+Password  : executer
+Then goto Directory Path /app/sdb/Condizioni/bin/*.sh File
+Run File like --> sh cn_DBU_exportSogliaDiTrasparenza.sh BSE 20130801
+
+To View File Which is Written by Shell Script
+---------------------------------------------------------------
+Server IP : teapp
+Username  : executer
+Password  : executer
+The output file located in /app/sdb/Condizioni/data/output/BSE..
+
+To Run ISE Services Through SOAPUI Tool..
+---------------------------------------------------------------
+1. Open SoapUI tool.
+2. New SoapUI Project
+3. Enter Project name
+4. Enter wsdl Path (http://te-x-net.bansel.it/axis/services/SSRISE?wsdl)
+5. open Invoke service menu
+6. give below xml as input 
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:per="http://www.sella.it/schema/proceduredibase/PersonalizzazioneConto" xmlns:bas="http://www.sella.it/schema/Basics">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <per:GetPersonalizzazioneContoRequest>
+         <per:Personalizzazione_Conto>
+            <per:NomeCondizione>CCA02</per:NomeCondizione>
+            <per:DataDecorrenza>07/01/2013</per:DataDecorrenza>
+            <!--Optional:-->
+            <per:DataFineValidita></per:DataFineValidita>
+            <!--Optional:-->
+            <per:NumeroContoHost></per:NumeroContoHost>
+            <!--Optional:-->
+            <per:IdConto>2135945</per:IdConto>
+            <!--Optional:-->
+            <per:ListaDiscriminatori></per:ListaDiscriminatori>
+            <per:NewValue>limite=,percentuale=,va=9,vmin=,vmax=;</per:NewValue>
+            <!--Optional:-->
+            <per:CodiceUdmValoriScaglioni>EUR</per:CodiceUdmValoriScaglioni>
+            <!--Optional:-->
+            <per:CodiceUdmLimitiScaglioni></per:CodiceUdmLimitiScaglioni>
+            <!--Optional:-->
+            <per:Note>TEST</per:Note>
+            <!--Optional:-->
+            <per:Negoziabile></per:Negoziabile>
+            <!--Optional:-->
+            <per:Indicizzata></per:Indicizzata>
+            <!--Optional:-->
+            <per:ExternalSubSystemCode>TEST</per:ExternalSubSystemCode>
+            <!--Optional:-->
+            <per:TipoScaglione></per:TipoScaglione>
+            <!--Optional:-->
+            <per:NomeFamiglia></per:NomeFamiglia>
+            <!--Optional:-->
+            <per:DataMantenimento></per:DataMantenimento>
+            <per:MessageContext>
+               <bas:Sender>InternetBanking</bas:Sender>
+               <bas:ABI>03268</bas:ABI>
+               <!--Optional:-->
+               <bas:Auth-Token></bas:Auth-Token>
+            </per:MessageContext>
+         </per:Personalizzazione_Conto>
+      </per:GetPersonalizzazioneContoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+7. Run The Application
+
+SAO
+---------------------------------------------
+Test
+===============================================================
+https://te-soa.bansel.it/soa-infra/services/default/TrovaCondizioni/TrovaCondizioni?WSDL
+
+Pre
+===============================================================
+https://pp-soa.bansel.it/soa-infra/services/default/TrovaCondizioni/TrovaCondizioniService?WSDL..
+
+Scala Assignments
+---------------------------------------------------------------
+https://github.com/frankh/coursera-scala/blob/master/objsets/src/main/scala/objsets/TweetSet.scala
+
+New Logger API For Projects
+---------------------------------------------------------------
+https://svil.bansel.it/wiki/display/ITFRAMEWORKDIBASE/Java+API+Tutorial
+
+Mobile_Web_Toolkit Notes
+---------------------------------------------------------------
+\\backupsvr\others\E-Learning\Mobile_Web_Toolkit
+
+MAC Address Registration for H2o Access
+---------------------------------------------------------------
+https://community.bansel.it/wiki/display/BASCH/MAC+Address+Registration+for+H2o+Access
+
+Meeting with room request in Outlook 2003
+---------------------------------------------------------------
+https://community.bansel.it/wiki/display/BASCH/Meeting+with+room+request+in+Outlook+2003
+
+Outlook Mail Configuration
+---------------------------------------------------------------
+https://community.bansel.it/wiki/display/BASCH/Outlook+Mail+Configuration
+
+To Run Massive Charge File Locally With svil113 Database
+---------------------------------------------------------------
+1. Create Massive Charge File with entry like.. (for format guide see cn_massive_charge.ctl file in Condizioni Project)
+
+1@@CC007@@181818@@20131230@@@@@@0.045@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PuntiPercentuali
+1@@CC007@@181818@@20131230@@@@@@0.045@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PuntiPercentuali
+1@@CC007@@181818@@20131230@@@@@@0.045@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@PuntiPercentuali
+
+2. Open Normal Command Promt and type command  like 
+   sqlldr userid=svil13@teorabe/Cond..01 control=d:/cn_massive_charge.ctl data=D:/ImportoAssluto-Massive.txt
+3. Enter
+
+It ll replace all records in table cn_temp_massive_charge from the txt file in svil13 Database.
+then we can execute Proceture cn_pkg_massive_charge.cn_pr_massive_charge in Database.
+it ll try to insert all records from cn_temp_massive_charge to valoriCOndizione table.
+if any error occured while insertion the status flag as 2.. and that error record fall into cn_lg_batch table as referance of error.
+
+http://search.safaribooksonline.com
+---------------------------------------------------------------
+User Name                 :  sriram.k@sella.it
+Password                  :  safari123 
+
+Install DEB file in Ubundu 
+---------------------------------------------------------------
+sudo dpkg -i <file_name>.deb
+
+Vidya Username Password for prozzz account
+---------------------------------------------------------------
+username : vidhyaarohini.
+password: sivaandalvidya123.
+need to send mail to : vidya_rohini@infosys.com
+
+Tassi Insertion for CC005
+---------------------------------------------------------------
+Conto Id : 7327083  - Balaji
+		       7050162  - Karthik  --11004666
+		       10793994 - Marco GBS ID = BSOZ7
+or
+Numero Conto : 7A52708722570 - Balaji
+							 9FO1917310000 - Karthik
+1. Decorrenza : today Date
+2. Tipo Tasso : Creditoro for CC003
+								Debitoro for CC005
+								Grantito for CC..
+3. Linea Fido : start With 0
+4  Parametro  : start with EUR
+5. Period. Aggior. : mensile
+6. Cod. Dip. Aut. : 473
+7. Spread : 1 to 5
+
+To Find ID Conto for Tassi Insertion
+---------------------------------------------------------------
+SELECT *
+  	FROM tpar_ma_conti_parametrati t
+ 	WHERE (t.tp_cp_idbanca = 1)
+    AND (t.tp_cp_data_validita <= SYSDATE)
+    AND (SYSDATE <= NVL(t.tp_cp_data_modifica_stato, SYSDATE)) 
+
+To Run Local FOP for PDF Print
+----------------------------------------------------------------
+1. Copy VariazioniCondizioni_Ver00-xx.xsl in same location and name new file as like test.xsl and remove Barcode related tags in that test.xsl file.
+2. Download FOP Zip file and extract it to specified location (ex: D:\fop-0.20.5)
+3. Create Sample xml file an same path name it like test.xml (we can get sample xml from "select * from st_tr_printed_xml where px_id_documento=100086854192" here 100086854192 is restampa document no)
+4. run cmd 
+5. go to fop path like >cd D:\fop-0.20.5
+6. enter the command
+	fop -xml D:\CondizioniWorkspace\Condizioni\condizioni-pdf-intranet\src\main\resources\pdf\xsl\test.xml -xsl D:\CondizioniWorkspace\Condizioni\condizioni-pdf-intranet\src\main\resources\pdf\xsl\test.xsl -pdf test.pdf
+7. we getting pdf in D:\fop-0.20.5\test.pdf 
+(Help Query: select * from st_tr_printed_xml where px_id_documento=100086855903)
+
+Configure PDF Stampa Server Path
+--------------------------------------------------------------
+/mount/appdm/a_dmn/PdfServer/bin
+/mount/appdm/a_dmn/PdfServer/data/Condizioni/pdf/xsl
+/mount/appdm/a_dmn/PdfServer/data/Condizioni/pdf/xsl
+/mount/appdm/a_dmn/PdfServer/bin/apache-tomcat-6.0.16/conf
+/mount/appdm/a_dmn/PdfServer/data/Condizioni/properties
+
+Restart the PDF server
+-------------------------------------------------------------
+1. Move all xsl files into /mount/appdm/a_dmn/PdfServer/data/Condizioni/pdf/xsl
+1. Move pdf.properties file into /mount/appdm/a_dmn/PdfServer/data/Condizioni/properties
+2. Replace  D:\Tools\Others\startPDF.sh to /mount/appdm/a_dmn/PdfServer/bin/startPDF.sh
+3. goto cd /mount/appdm/a_dmn/PdfServer/bin path using putty
+then sh stopPDF.sh or sh startPDF.sh
+
+My Education Loan Account Number
+----------------------------------------------------------------
+SBI EDU LOAN ACC NO : 30287747892
+
+Grant For Local Oracle Packages
+----------------------------------------------------------------
+exec tr_pa_util.DO_GRANT(P_NAME => 'CN_PKG_MASSIVE_CHARGE',P_TYPE => 'PACKAGE BODY');
+
+Add jmockit Jar in Defualt Runtime Configuration
+----------------------------------------------------------------
+Eclipse -> Windows -> preference -> Java -> Installed JREs -> Edit JRE 
+In Default VM Arguments give
+	type -javaagent:D:\Tools\Others\jmockit-0.999.10.jar
+Save.
+
+My H2O User Id 
+-----------------------------------------------------------------
+import it.sella.condizioni.external.ISecurity;
+System.out.println(ISecurity.Factory.getSecurity().getUserId());
+Balaji : output: 2192786
+Karthik : output :  6025856
+
+
+Realigning Server:
+------------------------------------------------------------------
+1. Go to any beadm or feadm.. (beadm)
+2. Enter the command touch /nodel/align.txt
+3. Enter cd /nodel
+4. ls
+See align.txt is there.. it means server realign started. sometimes later it ll change realign_progress.txt
+5. After align.txt destroyed
+	beadm -> sh startBEADM.sh and sh startFEADM.sh
+6.Change Password of connectionPooling in Weblogic Server..
+  userName : 9999999
+	Password: bsella81
+	for FE: http://172.22.45.55:20111/console 
+		Services->JDBC->Data Sources->clientPool->Connection Pool->Lock & Edit->Change the password -> Save -> Activate Changes
+  for BE: http://172.22.45.55:20000/console
+  	Services->JDBC->Data Sources->clientPool ( Both BE & BH cluster ) -> Connection Pool -> Lock & Edit -> Change the password -> Save -> Activate Changes
+7. Start BE,BH and IN,IH Custers.. and go ahead
+
+
+
+Licence Manager Application
+-----------------------------------------------------------------
+http://blog.patrikdufresne.com/2012/04/licensing-module-for-java.html
+
+
+EAR File location of catalogoprodottibe Project
+-----------------------------------------------------------------
+/mount/bea/ext/10/10330/system/DPdomain/DPcluster/servers/serverDP1/stage/catalogoprodottibe-app-1/1.0.24/catalogoprodottibe-app-1.0.24.ear
+
+
+How to Release Files In Test Env
+------------------------------------------------------------------
+1. Go to Pro Env
+2. Click Servizi Menu
+3. In Side bar we having "Richieste Build e Deploy Componenti" link.. click that
+4. Release Page will load
+5. Click "Request Release for Test" link
+6. Choose Project Name Condizioni or Servizi
+7. Give "Impact Description" for Release Note
+8. Choose Component type as "ASA" or "DBA" or "SH"
+9. If DBA Means Select Weblogic_Dba@OraBE
+10. Give Committed Version No and Click Send Request Button.
+
+
+FD Enabled IDCONTO 
+-------------------------------------------------------------------
+BALAJI CONTO ID  : 2135945
+AROCKIA CONTO ID : 418510      FEA
+AROCKIA CONTO ID : 11721189    FD  SIMPLICE
+
+
+1000928537021
+100092853627
