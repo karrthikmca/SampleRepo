@@ -1,0 +1,83 @@
+1. Who is responsible for Transaction between Database and Java in Hibernate?
+2. we having LinkedList with dublicate elements.. how we can remove dublication from that? 
+3. if we having linkedlist with Emplyee Object means how we can remove dublication? and what is timecomplextity of this?
+4. we having Linked list with 4 nodes? accordingly n1, n2, n3, n4
+    here n1 points to n2
+    n2 points to n3
+    n3 points to n4
+    and n4 points to n2   
+    how can we find linked list having loop like this using java??
+5. Is it possibl to having try block without catch but having finally block?
+6. Is Static method can Override?
+7. if we having the overload methods like
+    void add(StringBuilder obj){}
+    void add(StringBuffer obj){}
+    the if we call add(null) means what will happen?
+8. if we having the overload methods like
+    void add(Parent obj){}
+    void add(Child obj){}
+    the if we call add(null) means what will happen? 
+9.  if two threads calling 2 different sync method means what will happen?
+10. when stackoverflow exception raise? write code?
+11. when ouofmemory exception raise? write code?
+12. what heap memory? stack memory? when objects store on these?
+13. final Parent c= new Child();
+		c.sample();
+		System.out.println(c.count);    // output
+		
+		final Child child = new Child();		
+		child.sample();
+		System.out.println(child.count);     // output
+		
+		final Parent parent= new Parent();
+		parent.sample();
+		System.out.println(parent.count);      // output
+14. order of ArrayList? LinkedList? HashSet? TreeSet? HashMap? TreeMap?  
+15. What is CGI? Diff bw CGI and Servlet?
+16. How we can create Thread Safe Servlet Application?
+17. Diff bw ServletConfig and ServletContext?
+18. life Cycle of Spring();
+19. How Servlet manage Multiple Users?
+20. What is TLD?
+21. Jsp Implicit Objects?
+22. How we call 2 thread in same class calling different methods?
+23. Write Program For Fibonacchi Serious?
+24. Write Program For find Amstrong Number?  
+25. String s="1,2,3,1,2,3,4,6,7";
+    Cound Each Number How Many time ocured in this list?
+26. Find Common Numbers in 2 Diffrent Lists?
+27. How to Validate IP Address?
+28. How to create immutable Class like String?
+29. Live Examples for Abstarction And Encapsulations?
+30. Write Program for Singleton Pattern?
+31. Write Program for Facotry Pattern?
+32. Write the Servlet Program for Validate Username and Password?
+33. How to Validate Email Id?
+34. How Many user Access Servlet at a time?
+35. How Servelt Maintaining User Session?
+36. In Which the wait, notify, notifyAll method reside? and whats the use of it? 
+37. how you overcome deadlock??
+38. how types of action classes are there in struts? what are they?
+39. What is diff bw Beanfactory and application context ?
+40. What is dialect in hibernate? and use of it?
+41. How you acheive inheritance in hibernate?
+42. What is bucket algorithm of hashcode?
+43. What is Externalization?
+44. What are the method inside the String Class
+45. Whar are the method inside the Collections?
+46. Whar are the method inside the Thread?
+47. final Check check = null;
+		check.check();      // Static Method
+		What will Happen?
+48. what is Second Level Cache in hibernate?
+49. What is String Constant Pool?
+50. Real Time example for Abstarction and Encapsulations?
+51. What is cascade in hibernate? types? explain?
+
+
+
+
+
+
+
+
