@@ -1,0 +1,18 @@
+Question:
+
+ExerciseOne
+
+	Phone and Mobile Entities are already created where Mobile is a Phone. Use appropriate annotation to retrieve only Mobile or Phone information.
+	
+Exercise Two
+
+	Entities Person and Vehicle are already available. With the help of element collection feature in JPA 2.0 use appropriate annotaton to join Vehicle and Person
+	
+Exercise Three
+
+	Address is an embedded object in Customer. The goal is to embed Address inside Company.
+	
+Exercise Four
+
+	Goal is to prepare a named query for "Customer.findByCity" using multiple embeddable objects
+
