@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/Pair"/>
+	<classpathentry kind="src" path="src/Cog1"/>
+	<classpathentry kind="src" path="src/Test11"/>
+	<classpathentry kind="src" path="src/Test3"/>
+	<classpathentry kind="src" path="src/Test2"/>
+	<classpathentry kind="src" path="src/Test1"/>
+	<classpathentry kind="src" path="src/Work"/>
+	<classpathentry kind="src" path="src/StoreCredit"/>
+	<classpathentry kind="src" path="src/T9 Dictionary"/>
+	<classpathentry kind="src" path="src/Reverse"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
