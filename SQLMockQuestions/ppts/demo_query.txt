@@ -1,0 +1,96 @@
+
+(DEMO ON TEST ENVIRONMENT)
+----------------------------------------------------------------------------------------------------------------
+
+1) USER_SEQUENCES:
+
+	SELECT * FROM USER_SEQUENCES
+
+2) USER_INDEXES	
+	
+	SELECT * FROM USER_INDEXES
+
+3) USER_IND_COLUMNS
+
+	SELECT * FROM USER_IND_COLUMNS
+
+----------------------------------------
+DYNAMIC PARAMETER : 
+------------------------
+
+
+
+OSN SCHEMA :
+----------------------------------------------------------------------------------------------------------------
+
+1) desc v$session;
+
+	example: select username,terminal,osuser,machine from v$session where username is not null;
+
+2) desc V$DATABASE;
+	ex : select name,created,db_unique_name from v$database;
+
+3) desc v$INSTANCE;
+	ex: select name,created,db_unique_name from v$database;
+
+4) desc V$PARAMETER;
+	
+	select * from nls_session_parameters where parameter='NLS_DATE_FORMAT'
+
+	select * from nls_session_parameters where parameter='NLS_DUAL_CURRENCY'
+
+	select * from nls_session_parameters where parameter='NLS_DUAL_CURRENCY'
+
+5) desc v$reserved_words;
+
+	ex: select keyword,length,reserved,res_type from v$reserved_words where length>20;
+
+6) desc v$object_usage;
+	ex: select * from v$object_usage;
+
+
+(DEMO ON TEST ENVIRONMENT)
+----------------------------------------------------------------------------------------------------------------
+
+READING COMMENTS :
+------------------------
+
+1) select * from all_tab_comments;
+
+2) select * from all_col_comments where table_name = 'USER_JOBS';
+
+
+OSN SCHEMA :
+----------------------------------------------------------------------------------------------------------------
+
+7) Compiling Views:
+
+	SELECT STATUS, OBJECT_TYPE, OBJECT_NAME
+	FROM USER_OBJECTS
+	WHERE STATUS = 'INVALID'
+	AND OBJECT_NAME= 'TESTMV_WOUTDIFFERED'
+	ORDER BY OBJECT_NAME;	
+
+ 7.a) USER VIEW
+-----------------------
+
+	SELECT TEXT
+	FROM USER_VIEWS
+	WHERE VIEW_NAME = 'EMP_DEMOVIEW';
+
+
+
+
+8) 	(DEMO ON TEST ENVIRONMENT)
+----------------------------------------------------------------------------------------------------------------
+
+	SELECT CONSTRAINT_NAME, CONSTRAINT_TYPE, R_CONSTRAINT_NAME, STATUS
+	FROM USER_CONSTRAINTS
+	WHERE TABLE_NAME = 'CTR_MA_DOCUMENT_CODE';
+
+9) FINDING COLUMNS:
+---------------------
+	 SELECT * 
+	FROM USER_TAB_COLUMNS
+	WHERE COLUMN_NAME = 'CTR_DOC_CODE';
+
